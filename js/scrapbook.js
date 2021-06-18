@@ -1,4 +1,4 @@
-const url = 'http://localhost:8080';
+const url = 'https://back-end-scrapbook-avaliacao.herokuapp.com/';
 axios.defaults.baseURL = url;
 
 async function loadTable() {
