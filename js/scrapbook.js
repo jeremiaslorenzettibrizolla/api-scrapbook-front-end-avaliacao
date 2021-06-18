@@ -93,5 +93,9 @@ async function updateMessage(event, id) {
 async function deleteMessage(event, id) {
     event.preventDefault();
     let response = await axios.delete(`/messages/${id}`);
+
+    document.getElementById('id').value = '';
+    description.value = '';
+    details.value = '';
     loadTable();
 };
