@@ -40,7 +40,7 @@ function createAccount(event) {
     storage.push(user);
 
     localStorage.setItem('users', JSON.stringify(storage));
-    user.value = '';
+    email.value = '';
     password.value = '';
     repeatPassword.value = '';
 

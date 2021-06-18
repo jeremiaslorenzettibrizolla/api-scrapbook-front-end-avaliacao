@@ -67,6 +67,7 @@ async function saveMessage(event) {
             document.getElementById('scrap-sucess').classList.add('none');
         }, 2000);
     }
+
     id.value = '';
     description.value = '';
     details.value = '';
