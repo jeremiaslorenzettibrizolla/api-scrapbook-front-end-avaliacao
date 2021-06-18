@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/scrapbook.css">
+    <title>Meus Recados</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-12 text-center ">
+           <div class="alert alert-danger none" id="scrap-error" role="alert">
+              <b>O campo descrição deve ser preenchido!</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+           <div class="alert alert-success none" id="scrap-sucess" role="alert">
+              <b>Recado cadastrado com sucesso!</b>
+            </div>
+        </div>
+    </div>
+    <div class="content-page">
+    <h1 class="pb-1">Meus Recados</h1>
+        <div class="row top-page">
+            <input type="text" class="col-1"
+                id="id">
+            <input type="text" class="id col-5"
+                id="description" 
+                placeholder="Descrição...">
+            <input type="text" class="col-5"
+                id="details" 
+                placeholder="Detalhamento...">
+            <button class="col-1" id="btnAddNewMessage" onclick="saveMessage(event)">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+        <div>
+            <table class="table table-dark table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Detalhamento</th>
+                    <th scope="col" class="col-2">Ação</th>
+                  </tr>
+                </thead>
+                <tbody id="scrapbook" onload="loadTable()"></tbody>
+              </table>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/scrapbook.js"></script>
+</body>
+</html>
