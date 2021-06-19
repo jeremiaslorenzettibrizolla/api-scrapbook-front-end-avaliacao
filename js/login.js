@@ -13,7 +13,7 @@ function login(event) {
  
    for (let user of storage) {
       if (emailLogin.value === user.email && passwordLogin.value === user.password) {
-         window.location.href = '/index.html';
+         window.location.href = '/scrapbook.html';
          return;
       } else {
          alert('Email ou senha inválido');

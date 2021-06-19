@@ -26,7 +26,7 @@ function createAccount(event) {
 
     for (let user of storage) {
         if (email.value === user.email && password.value === user.password) {
-            window.location.href = '/index.html';
+            window.location.href = '/scrapbook.html';
             alert('Este email já esta cadastrado!   Logando...');
             return;
         } 
